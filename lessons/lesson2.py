@@ -41,3 +41,32 @@ beka.print()
 print(Teach.mro())
 
 print(beka)
+
+
+
+class Bank:
+    def __init__(self, name, age, money, password):
+        self.__name = name
+        self.__age = age
+        self.__money = money
+        self.__passw = password
+
+    def pname(self):
+        print(self.__name, self.__money)
+
+    def __ppas(self):
+        print(self.__passw)
+
+    def pasww(self):
+        self.__ppas()
+
+beka = Bank('бека', 20, 0, '12345678987543')
+beka.__money = 123456789
+
+print(beka.__money)
+beka.pname()
+
+beka.__passw = '0'
+print(beka.__passw)
+beka.pasww()
+print(dir(Bank))
